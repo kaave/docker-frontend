@@ -189,7 +189,7 @@ tags
 # VScode settings
 /.vscode
 # build files (development)
-/src/.tmp
+/.tmp
 # build files (production)
 /build
 # build files (difference files)

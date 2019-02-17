@@ -4,7 +4,7 @@ const packageImporter = require('node-sass-package-importer');
 
 exports.path = {
   dest: {
-    development: path.join(process.cwd(), '.tmp'),
+    development: '/.tmp',
     production: '/build',
   },
   scripts: path.join(process.cwd(), 'src', 'scripts'),
