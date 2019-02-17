@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="<%= lang %>">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+
+    <meta itemprop="name" content="<%= title %>" />
+    <meta itemprop="description" content="<%= description %>" />
+<% if (typeof metaImage === 'string') { %>
+    <meta itemprop="image" content="<%- metaImage %>" />
+<% } %>
+
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:description" content="<%= description %>" />
+<% if (typeof og === 'object') { %>
+    <meta property="og:type" content="<%= og.type %>" />
+    <meta property="og:image" content="<%= og.image %>" />
+    <meta property="og:url" content="<%= og.url %>" />
+    <meta property="og:site_name" content="<%= og.siteName %>" />
+<% } %>
+
+<% if (typeof twitter === 'object') { %>
+    <meta name="twitter:card" content="<%= twitter.card %>" />
+    <meta name="twitter:site" content="<%= twitter.site %>" />
+<% } %>
+
+<% styles.forEach(style => { %>
+    <link rel="stylesheet" href="<%- style %>">
+<% }) %>
+
+</head>
+<body>

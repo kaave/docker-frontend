@@ -1,0 +1,23 @@
+<%
+const config = {
+    title: 'top',
+    description: 'This is top page',
+    styles: ['/css/index.css'],
+    scripts: [
+        'https://cdn.polyfill.io/v2/polyfill.js?features=default-3.3,Promise',
+        '/js/vendor.bundle.js',
+        '/js/index.js'
+    ],
+    metaImage: 'https://dummyimage.com/600x400/333/ddd.png&text=Dummy+image'
+};
+%>
+
+<%- include('./common/_head.ejs', { ...config }) %>
+
+<main id="main" class="main" role="main">
+<% [...Array(5).keys()].forEach(index => { %>
+    <div class="panel-<%= index + 1 %>"><%= index + 1 %></div>
+<% }) %>
+</main>
+
+<%- include('./common/_foot.ejs', { ...config }) %>
