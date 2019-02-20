@@ -73,8 +73,8 @@ exports.view = {
 };
 
 exports.port = {
-  browserSync: 8880,
-  webpackDevServer: 13000,
+  browserSync: parseInt(process.env.DEV_SERVER_PORT, 10) || 8880,
+  webpackDevServer: parseInt(process.env.DEV_SOCKET_PORT, 10) || 13000,
 };
 
 exports.browser = {
