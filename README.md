@@ -1,19 +1,23 @@
 # Docker based frontend dev workspace
 
+## Dependencies
+
+- `docker`
+- `make`
+
 ```bash
 # setup
-cp .env.example .env
-docker-compose build
+make init
 
 # start containers
-docker-compose up -d
+make start
 
 # install npm packages
-docker-compose run app yarn install
+make npm-install
 
 # start dev server
-docker-compose run app yarn start
+make dev
 
 # build
-docker-compose run app yarn build
+make build
 ```
